@@ -1,0 +1,186 @@
+/* Iniciamos com a referência :root para deixar especificado todas as cores utilizadas no projeto */
+:root {
+  --branco-principal: #FFFFFF;
+  --cinza-secundário: #C0C0C0;
+  --botão-azul: #167BF7;
+  --cor-de-fundo: #00030C;
+  --font-principal: 'Inter', sans-serif;
+  --botao-azul-efeito: #3c92fa;
+}
+
+body {
+  background-color: var(--cor-de-fundo);
+  color: var(--branco-principal);
+  font-family: var(--font-principal);
+  font-size: 16px;
+}
+
+/* Quando utilizado somente o asterisco, as funções determinadas abaixo vão acontecer por toda a página*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.principal {
+  background-image: url("img/Background.png");
+  /*Para colocar a imagem de fundo que não interfere na experiência*/
+  background-repeat: no-repeat;
+  /*Para não espelhar a imagem em baixo*/
+  background-size: contain;
+  /*Para ocupar toda a página*/
+  align-items: center;
+  /*Alinha todos os itens no centro horizontalmente*/
+  text-align: center;
+  /*Alinha ao centro tudo que está dentro desse bloco*/
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /*Divide a tela em duas porcentagens, nesse caso 50% para a esquerda e 50% para a direita*/
+}
+
+.container--caixa {
+  margin: 0 6em;
+}
+
+.container--titulo {
+  font-size: 28px;
+  font-weight: 700;
+  padding: 1em;
+}
+
+.container--imagem {
+  margin: 1em 0 2em 0;
+}
+
+.container--botao {
+  background-color: var(--botão-azul);
+  /*Background do botão*/
+  border-radius: 5px;
+  /*Borda arredondada do botão*/
+  padding: 1em;
+  /*Bordas internas com 1em (1x o tamanho da letra padrão)*/
+  color: var(--branco-principal);
+  /*Cor da fonte do botão*/
+  display: block;
+  /*Não ocupa o bloco todo*/
+  text-decoration: none;
+  /*Tira a linha abaixo do link*/
+  margin-bottom: 1em;
+  /*Espaço na margem de baixo*/
+  margin-top: 2em;
+  /*Espaço na margem de cima*/
+  text-align: center;
+  /*Alinha o texto ao centro*/
+}
+
+.container--botao:hover {
+  background-color: var(--botao-azul-efeito);
+  color: var(--cor-de-fundo)
+}
+
+.botao--secundario {
+  background-color: transparent;
+  border: 2px solid var(--branco-principal);
+  /*Define as bordas desse botão tam/solida/cor*/
+}
+
+.container--aviso {
+  font-size: 12px;
+  color: var(--cinza-secundário);
+  text-align: center;
+  padding-top: 1em;
+}
+
+.secundario {
+  align-items: center;
+  /*Alinha todos os itens no centro horizontalmente*/
+  margin: 0 10em;
+}
+
+.secundario--imagem {
+  width: 80%;
+}
+
+.descricao--titulo {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--branco-principal);
+  margin-bottom: 0.1em;
+}
+
+.container--descricao {
+  padding: 2em;
+}
+
+.descricao--texto {
+  color: var(--cinza-secundário);
+}
+
+.secundario--botao {
+  display: inline-block;
+}
+
+.dispositivos {
+  text-align: center;
+}
+
+.dispositivos--titulo {
+  font-size: 43px;
+  color: var(--branco-principal);
+  margin-bottom: 2em;
+}
+
+.dispositivos--lista {
+  display: flex;
+  justify-content: center;
+  /*Para centralizar uma lista*/
+  list-style-type: none;
+  /*Para tirar as bolinhas de uma lista*/
+}
+
+.lista--itens {
+  font-size: 32px;
+  color: var(--branco-principal);
+  margin-bottom: 2em;
+}
+
+.rodape {
+  margin-bottom: 4em;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.rodape--logo {
+  margin-bottom: 2em;
+}
+
+.rodape--lista {
+  text-align: center;
+}
+
+.lista--link {
+  display: inline-block;
+  list-style-type: none;
+  /*Para tirar as bolinhas de uma lista*/
+  margin: 0 0.5em;
+}
+
+.texto--links:hover {
+  color: var(--botão-azul)
+}
+
+.texto--links {
+  color: var(--branco-principal);
+  text-decoration: none;
+}
+
+.rodape--texto {
+  text-align: center;
+  color: var(--cinza-secundário);
+  font-size: 13px;
+  margin-top: 2em;
+  font-family: var(--font-principal);
+}
